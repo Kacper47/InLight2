@@ -16,6 +16,18 @@ const NotificationBox = ({isFilterActive,
                           mySliderValue, onChangeFilter,
                           stopFilter}) => {
 
+      const iconImages = [
+        require(`../../../assets/img/dim.png`),
+        require(`../../../assets/img/filterA.png`),
+        require(`../../../assets/img/filterB.png`),
+        require(`../../../assets/img/sunrise.png`),
+        require(`../../../assets/img/midday.png`),
+        require(`../../../assets/img/sunset.png`),
+        require(`../../../assets/img/campfire.png`),
+        require(`../../../assets/img/AppIcon.png`),
+        require(`../../../assets/img/RemoveButton.png`),
+    ];
+
     return(
         <NotificationView isFilterActive={isFilterActive}>
           <FlexView>

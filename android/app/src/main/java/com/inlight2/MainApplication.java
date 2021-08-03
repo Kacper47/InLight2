@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.toyberman.drawOverlay.RNDrawOverlayPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.github.douglasjunior.reactNativeGetLocation.ReactNativeGetLocationPackage;
@@ -116,6 +117,7 @@ public class MainApplication extends Application implements ReactApplication {
 //             return Arrays.<ReactPackage>asList(
 //                     new FilterPackage(),
 //                     new MainReactPackage(),
+                       // new AsyncStoragePackage(),
                       // new VectorIconsPackage(),
 //                     new SplashScreenReactPackage(),
 //                     new ReactSliderPackage(),

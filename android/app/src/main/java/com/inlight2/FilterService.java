@@ -150,24 +150,18 @@
             color = Color.argb(alpha, red, green, blue);
         }
         else {
-
-
-
-
-
             int time = (int) extras.get("time");
             int sunrise = (int) extras.get("sunrise");
             int sunset = (int) extras.get("sunset");
 
             //Sunrise
             if(sunrise-10 < time || time <= sunrise+30){
-                color = Color.argb(sunriseColor);
-
+                color = Color.argb(75, 255, 178, 37);
                 handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     //Day
-                    fView.setBackgroundColor(Color.argb(dayColor));
+                    fView.setBackgroundColor(Color.argb(50, 50, 50, 50));
                 }
                 }, ((sunrise+30) - time) * 60 * 1000);
 
@@ -175,7 +169,7 @@
                 @Override
                 public void run() {
                     //Sunset
-                    fView.setBackgroundColor(Color.argb(sunsetColor));
+                    fView.setBackgroundColor(Color.argb(50, 50, 50, 50));
                 }
                 }, ((sunset-10) - time) * 60 * 1000);
                 
@@ -183,7 +177,7 @@
                 @Override
                 public void run() {
                     //Night
-                    fView.setBackgroundColor(Color.argb(nightColor));
+                    fView.setBackgroundColor(Color.argb(50, 50, 50, 50));
                 }
                 },  (((24*60 + sunrise-10) - time) * 60 * 1000));
             }
