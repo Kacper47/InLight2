@@ -30,10 +30,23 @@ import SplashScreen from 'react-native-splash-screen';
 import Geolocation from 'react-native-geolocation-service';
 //Permissions
 import RNDrawOverlay from 'react-native-draw-overlay';
+//Async storage
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 
 const App = () => {
+  // const setAsyncValue = () => {
+  //   AsyncStorage.setItem('DES', true)    
+  // }
+
+  // //Wyjmowanie z bazy zmiennej o kluczu 'DES' przy useEffect
+  // useEffect(() => {
+  //   AsyncStorage.getItem('DES').then(val => {
+  //   console.log(val);
+  // })
+  // }, [])
+
   //Splash screen
   useEffect(() => {
     SplashScreen.hide();
@@ -59,7 +72,7 @@ const App = () => {
   const [myGreen, setGreen] = useState(0);
   const [myBlue, setBlue] = useState(0);
 
-  const [isFilterActive, setFilterActive] = useState(false); 
+  const [isFilterActive, setFilterActive] = useState(false);
   const [myFilterIcon, setFilterIcon] = useState('');
   const [myFilterTitle, setFilterTitle] = useState('');
   const [myFilterLabel, setFilterLabel] = useState('');
